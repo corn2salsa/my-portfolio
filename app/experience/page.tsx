@@ -1,12 +1,13 @@
 // pages/experience.tsx
 import Head from "next/head";
+import type { ReactNode } from "react";
 
 type ExperienceItem = {
   role: string;
   company: string;
   location: string;
   dates: string;
-  description: string;
+  description: string | ReactNode;
 };
 
 const experiences: ExperienceItem[] = [
