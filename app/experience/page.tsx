@@ -93,7 +93,6 @@ export default function ExperiencePage() {
       <main className="min-h-screen bg-white">
 
         <div className="mx-auto max-w-5xl px-4 py-12">
-          {/* Header */}
           <header className="mb-10">
             <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
               Work and Internships
@@ -103,7 +102,7 @@ export default function ExperiencePage() {
             </p>
           </header>
 
-          {/* Work & Internships */}
+          {/* WORK */}
           <section className="space-y-6">
             {experiences.map((exp) => (
               <article
@@ -135,7 +134,7 @@ export default function ExperiencePage() {
             ))}
           </section>
 
-          {/* Extracurricular Header */}
+          {/* EXTRACURRICULAR */}
           <header className="mt-16 mb-6">
             <h2 className="text-2xl font-semibold tracking-tight text-gray-900">
               Extracurricular
@@ -145,7 +144,6 @@ export default function ExperiencePage() {
             </p>
           </header>
 
-          {/* Extracurricular list */}
           <section className="space-y-6">
             {extracurriculars.map((exp) => (
               <article

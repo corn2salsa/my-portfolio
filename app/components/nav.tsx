@@ -1,36 +1,54 @@
 import Link from "next/link";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects" },
-  { href: "/experience", label: "Experience" }, // 👈 new link
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
-
 export function Nav() {
   return (
-    <nav className="w-full border-b border-gray-200 bg-white/70 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-5">
-        <Link
-          href="/"
-          className="text-2xl font-semibold tracking-tight hover:opacity-80 transition"
-        >
-          Zach Wachtel
-        </Link>
-
-        <div className="flex gap-8 text-lg font-medium">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-gray-700 hover:text-black transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+    <header className="w-full bg-white">
+      <nav className="grid w-full grid-cols-[1fr_1fr_1fr_1fr] grid-rows-[72px_56px] border-b-2 border-black">
+        <div className="row-span-2 flex items-center justify-center border-r-2 border-black">
+          <Link
+            href="/"
+            className="text-lg font-medium uppercase tracking-wide hover:underline"
+          >
+            Zach Wachtel
+          </Link>
         </div>
-      </div>
-    </nav>
+
+        <div className="row-span-2 flex items-center justify-center border-r-2 border-black">
+          <Link
+            href="/experience"
+            className="text-lg font-medium uppercase tracking-wide hover:underline"
+          >
+            Experience
+          </Link>
+        </div>
+
+        <div className="row-span-2 flex items-center justify-center border-r-2 border-black">
+          <Link
+            href="/projects"
+            className="text-lg font-medium uppercase tracking-wide hover:underline"
+          >
+            Projects
+          </Link>
+        </div>
+
+        <div className="flex items-center justify-center border-b-2 border-black">
+          <Link
+            href="/about"
+            className="text-lg font-medium uppercase tracking-wide hover:underline"
+          >
+            About
+          </Link>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <Link
+            href="/contact"
+            className="text-lg font-medium uppercase tracking-wide hover:underline"
+          >
+            Contact
+          </Link>
+        </div>
+      </nav>
+    </header>
   );
 }

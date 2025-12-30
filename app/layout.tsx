@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Josefin_Sans, Mate } from "next/font/google";
 import { Nav } from "./components/nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-josefin",
+});
+
+const mate = Mate({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-mate",
+});
 
 export const metadata: Metadata = {
   title: "Zach Wachtel | Portfolio",
@@ -16,10 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${josefin.variable} ${mate.variable}`}>
+      <body className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
         <Nav />
-        <main className="mx-auto max-w-5xl px-4 py-10">{children}</main>
+        {children}
       </body>
     </html>
   );
