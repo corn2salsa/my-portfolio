@@ -40,15 +40,15 @@ export default function Home() {
         </div>
 
         <div className="flex justify-start lg:justify-end">
-          <div className="relative max-w-sm">
+          <div className="relative w-[320px] lg:w-[320px]">
             <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-purple-500 to-blue-500">
               <div className="absolute -inset-2 -z-10 rounded-3xl bg-gradient-to-r from-purple-500 to-blue-500 blur-xl opacity-60" />
 
               <Image
-                src="/images/zach.jpg"
+                src="/images/new_zach.jpg"
                 alt="Zach Portrait"
-                width={500}
-                height={800}
+                width={750}
+                height={1200}
                 className="w-full rounded-2xl object-cover shadow-xl"
                 priority
               />
