@@ -24,7 +24,7 @@ const websites: Website[] = [
   {
     title: "Bread Budgeting",
     description:
-      "Add a short description explaining what the website does, why you built it, and the tools you used.",
+      "Real time personal and household budgeting tracker with pie chart visualization, and editable groupings.",
     href: "",
     image: "",
   },

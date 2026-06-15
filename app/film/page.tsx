@@ -30,8 +30,8 @@ const videos: Video[] = [
   },
   {
     title: "Coming Soon",
-    role: "Role",
-    description: "Another project will be added here soon.",
+    role: "",
+    description: "",
     youtubeId: "",
   },
 ];
