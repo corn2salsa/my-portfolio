@@ -16,6 +16,8 @@ type FigmaDesign = {
   title: string;
   description: string;
   href: string;
+  image?: string;
+  prototypeHref?: string;
 };
 
 const websites: Website[] = [
@@ -41,12 +43,15 @@ const figmaDesigns: FigmaDesign[] = [
     description:
       "Figma prototype of an app designed to keep track of your contacts with a reminder system and prompts. Includes audience analysis, persona posters, journey maps, style guide, and usability testing",
     href: "https://www.figma.com/design/SEfnIWWShMK9zPhmcgfx1C/wachtel_final?t=ndNbukAgDFinw7to-0",
+    prototypeHref: "https://www.figma.com/proto/OC7n41COl54xsXEDwJUDjB/Stay-Connected?t=pSbkpUDA3rbbG6TH-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2",
+    image: "/images/scf2.jpeg",
   },
   {
     title: "About Me",
     description:
       "Short and fun about me design.",
     href: "https://www.figma.com/proto/1eyzR43oKP9HcVp1fNgtbT?node-id=0-1&t=oU9lvdFOQiUcqJN0-6",
+    image: "/images/figma.jpeg",
   },
 ];
 
@@ -137,7 +142,20 @@ export default function CodingProjectsPage() {
               key={`${design.title}-${index}`}
               className="rounded-2xl border border-[#3b235c] bg-[#100a18] p-6 shadow-sm transition hover:border-[#805ad5] hover:shadow-[0_0_16px_rgba(128,90,213,0.25)]"
             >
-              <div className="space-y-3">
+              <div className="aspect-video overflow-hidden rounded-2xl border border-[#3b235c] bg-[#100a18] shadow-sm">
+                {design.image ? (
+                  <img
+                    src={design.image}
+                    alt={`${design.title} preview`}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center px-6 text-center text-sm font-medium text-[#b794f4]">
+                    Design screenshot coming soon
+                  </div>
+                )}
+              </div>
+              <div className="mt-6 space-y-3">
                 <h3 className="text-xl font-semibold tracking-tight text-[#805ad5]">
                   {design.title}
                 </h3>
@@ -145,6 +163,25 @@ export default function CodingProjectsPage() {
                 <p className="leading-relaxed text-[#d8c3ff]">
                   {design.description}
                 </p>
+
+                <div className="flex flex-col items-start gap-2">
+                  {design.prototypeHref !== undefined &&
+                    (design.prototypeHref ? (
+                      <a
+                        href={design.prototypeHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-[#c4a7ff] underline underline-offset-4 transition hover:text-[#e1d2ff]"
+                      >
+                        View Interactive Prototype
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    ) : (
+                      <p className="text-sm font-medium text-[#b794f4]">
+                        Prototype link coming soon
+                      </p>
+                    ))}
+
 
                 {design.href ? (
                   <a
@@ -162,8 +199,10 @@ export default function CodingProjectsPage() {
                   </p>
                 )}
               </div>
+              </div>
             </article>
-          ))}
+            ))}
+          
         </div>
       </section>
 
