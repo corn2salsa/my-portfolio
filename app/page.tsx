@@ -25,8 +25,8 @@ const websites: Website[] = [
     title: "Bread Budgeting",
     description:
       "Real time personal and household budgeting tracker with pie chart visualization, and editable groupings.",
-    href: "",
-    image: "",
+    href: "https://final-project-team-30-chi.vercel.app/signup",
+    image: "/images/bread2.png",
   },
   {
     title: "Nice Log",
