@@ -12,7 +12,7 @@ const videos: Video[] = [
     title: "Untitled",
     role: "Director, Editor, Cinematographer",
     description:
-      "Documentary on my relationship with my father. It's pretty good but probably not a great representation of me as a person.",
+      "After not seeing my father for three years, I documented our reunion. This short explores our relationship through the footage of our encounter, reflecting on memory, absence, and what remains unsaid.",
     youtubeId: "SXxfyP7zVnw",
   },
   {
@@ -25,7 +25,7 @@ const videos: Video[] = [
     title: "A Dad's Dream",
     role: "Actor, Co-Writer, Co-Director, Co-Editor",
     description:
-      "A silly sketch about a dad and son. Hopefully, you aren't seeing a theme.",
+      "A raunchy sketch about a dad and son.",
     youtubeId: "Lq10XOaAXig",
   },
   {

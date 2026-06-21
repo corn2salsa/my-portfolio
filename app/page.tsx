@@ -22,18 +22,18 @@ type FigmaDesign = {
 
 const websites: Website[] = [
   {
-    title: "Bread Budgeting",
-    description:
-      "Real time personal and household budgeting tracker with pie chart visualization, and editable groupings.",
-    href: "https://final-project-team-30-chi.vercel.app/signup",
-    image: "/images/bread2.png",
-  },
-  {
     title: "Nice Log",
     description:
       "Personal Weekly Tracker with each day being tied to a real date and a grade system based on set goals.",
     href: "https://nice-log.vercel.app/index.html",
     image: "/images/nice.png",
+  },
+  {
+    title: "Bread Budgeting",
+    description:
+      "Real time personal and household budgeting tracker with pie chart visualization, and editable groupings.",
+    href: "https://final-project-team-30-chi.vercel.app/signup",
+    image: "/images/bread2.png",
   },
 ];
 
